@@ -2,7 +2,6 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta
@@ -19,7 +18,7 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>Корзина | MarketPlace</title>
-    <link rel="stylesheet" href="/src/index.css">
+    <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kaushan+Script|Montserrat:400,700&amp;subset=cyrillic-ext" rel="stylesheet">
   </head>
   <body>
@@ -39,11 +38,11 @@
     <header class="header">
       <div class="container">
         <div class="header__inner">
-          <div class="header__logo"><a class="header__logo__name" href="/public/index.html?#">MarketPlace</a></div>
-          <button type="text" class="header__catalog">Каталог<img src="/picture/menu.svg" width="17" alt=""></button>
+          <div class="header__logo"><a class="header__logo__name" href="index.html">MarketPlace</a></div>
+          <button type="text" class="header__catalog">Каталог<img src="picture/menu.svg" width="17" height="17" alt=""></button>
           <form class="search">
             <input type="search" class="header__search" placeholder="Искать на MarketPlace"/>
-            <button type="submit" class="button">Поиск<img src="/picture/search.svg" width="17" alt=""></button>
+            <button type="submit" class="button">Поиск<img src="picture/search.svg" width="17" height="17" alt=""></button>
           </form>
           <nav class="nav">
             <a class="nav__link" href="#" id="open_pop_up_enter">Войти</a>
@@ -54,34 +53,6 @@
         </div>
       </div>
     </header>
-
-    <div class="pop_up" id="pop_up_enter">
-      <div class="pop_up__container">
-        <div class="pop_up__body" id="pop_up_body">
-          <p>Вход</p>
-          <form action="">
-            <input type="text" placeholder="Логин">
-            <input type="text" placeholder="Пароль">
-            <button><a class="enter" href="/public/index3.html?#">Войти</a></button>
-          </form>
-          <div class="pop_up__close" id="pop_up_close_enter">&#10006</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="pop_up" id="pop_up_reg">
-      <div class="pop_up__container">
-        <div class="pop_up__body" id="pop_up_body">
-          <p>Регистрация</p>
-          <form action="">
-            <input type="text" placeholder="Логин">
-            <input type="text" placeholder="Пароль">
-            <button>Зарегистрироваться</button>
-          </form>
-          <div class="pop_up__close" id="pop_up_close_reg">&#10006</div>
-        </div>
-      </div>
-    </div>
 
     <main class="main">
         <div class="cart">
@@ -180,6 +151,35 @@
           </ul>
         </div>
       </footer>
+
+      <div class="pop_up" id="pop_up_enter">
+        <div class="pop_up__container">
+          <div class="pop_up__body" id="pop_up_body">
+            <p class="pop_up_name">Вход</p>
+            <form action="">
+              <input type="text" placeholder="Логин">
+              <input type="text" placeholder="Пароль">
+              <button><a class="enter" href="index3.html">Войти</a></button>
+            </form>
+            <div class="pop_up__close" id="pop_up_close_enter">&#10006</div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="pop_up" id="pop_up_reg">
+        <div class="pop_up__container">
+          <div class="pop_up__body" id="pop_up_body">
+            <p class="pop_up_name">Регистрация</p>
+            <form action="">
+              <input type="text" placeholder="Логин">
+              <input type="text" placeholder="Пароль">
+              <button>Зарегистрироваться</button>
+            </form>
+            <div class="pop_up__close" id="pop_up_close_reg">&#10006</div>
+          </div>
+        </div>
+      </div>
+
       <script src="script.js"></script>
 
 </body>

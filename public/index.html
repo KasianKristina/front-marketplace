@@ -2,7 +2,6 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta
@@ -19,7 +18,8 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>MarketPlace</title>
-    <link rel="stylesheet" href="/src/index.css">
+    <link rel="stylesheet" href="../src/index.css">
+    
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kaushan+Script|Montserrat:400,700&amp;subset=cyrillic-ext" rel="stylesheet">
   </head>
   <body>
@@ -37,49 +37,21 @@
 
     <header class="header">
         <div class="header__inner">
-          <div class="header__logo"><a class="header__logo__name" href="/public/index.html?#">MarketPlace</a></div>
-          <button type="text" class="header__catalog">Каталог<img src="/picture/menu.svg" width="17" alt=""></button>
+          <div class="header__logo"><a class="header__logo__name" href="index.html">MarketPlace</a></div>
+          <button type="text" class="header__catalog">Каталог<img src="picture/menu.svg" width="17" height="17" alt=""></button>
           <form class="search">
             <input type="search" class="header__search" placeholder="Искать на MarketPlace"/>
-            <button type="submit" class="button">Поиск<img src="/picture/search.svg" width="17" alt=""></button>
+            <button type="submit" class="button">Поиск<img src="picture/search.svg" width="17" height="17" alt=""></button>
           </form>
 
           <nav class="nav">
             <a class="nav__link" href="#" id="open_pop_up_enter">Войти</a>
             <a class="nav__link" href="#" id="open_pop_up_reg">Регистрация</a>
             <a class="nav__link" href="#">Избранное</a>
-            <a class="nav__link" href="/public/index2.html?#">Корзина</a>
+            <a class="nav__link" href="index2.html">Корзина</a>
           </nav>
         </div>
     </header>
-
-    <div class="pop_up" id="pop_up_enter">
-      <div class="pop_up__container">
-        <div class="pop_up__body" id="pop_up_body">
-          <p>Вход</p>
-          <form action="">
-            <input type="text" placeholder="Логин">
-            <input type="text" placeholder="Пароль">
-            <button><a class="enter" href="/public/index3.html?">Войти</a></button>
-          </form>
-          <div class="pop_up__close" id="pop_up_close_enter">&#10006</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="pop_up" id="pop_up_reg">
-      <div class="pop_up__container">
-        <div class="pop_up__body" id="pop_up_body">
-          <p>Регистрация</p>
-          <form action="">
-            <input type="text" placeholder="Логин">
-            <input type="text" placeholder="Пароль">
-            <button>Зарегистрироваться</button>
-          </form>
-          <div class="pop_up__close" id="pop_up_close_reg">&#10006</div>
-        </div>
-      </div>
-    </div>
 
     <main class="main">
       <div class="content">
@@ -89,7 +61,7 @@
           <a class="btn" href="#">Смотреть товары</a>
         </div>
         <div class="box">
-          <img class="main-image" src="/picture/main2_item.jpg" width="700" alt="main">
+          <img class="main-image" src="picture/main2_item.jpg" width="700" height="320" alt="main">
         </div>
       </div>
       <div class="delivery">
@@ -100,40 +72,40 @@
         <h3 class="new">Новинки</h3>
         <div class="product">
           <div class="product-item">
-            <img src="/picture/item_1.jpg" alt="product">
+            <img src="picture/item_1.jpg" width="200" height="200" alt="product">
             <p class="product-title">Ноутбук Acer Aspire 5 A517-52-33P2 (NX.A5DER.00W)</p>
             <p class="product-price">89 999 ₽</p>
             <button class="buy">Купить</button>
-            <button class="like"><img src="/picture/heart.png" width="15" alt=""></button>
+            <button class="like"><img src="picture/heart.png" width="15" height="15" alt=""></button>
           </div>
           <div class="product-item">
-            <img src="/picture/item_2.jpg" alt="product">
+            <img src="picture/item_2.jpg" width="200" height="200" alt="product">
             <p class="product-title">Смартфон Xiaomi Redmi Note 11 NFC 4GB+128GB Twilight Blue</p>
             <p class="product-price">25 999 ₽</p>
             <button class="buy">Купить</button>
-            <button class="like"><img src="/picture/heart.png" width="15" alt=""></button>
+            <button class="like"><img src="picture/heart.png" width="15" height="15" alt=""></button>
           </div>
           <div class="product-item">
-            <img src="/picture/item_3.jpg" alt="product">
+            <img src="picture/item_3.jpg" width="200" height="200" alt="product">
             <p class="product-title">Спортивные наушники Bluetooth Beats Powerbeats Pro Totally Wireless Navy (MY592EE/A)</p>
             <p class="product-price">16 999 ₽</p>
             <button class="buy">Купить</button>
-            <button class="like"><img src="/picture/heart.png" width="15" alt=""></button>
+            <button class="like"><img src="picture/heart.png" width="15" height="15" alt=""></button>
           </div>
           <div class="product-item">
-            <img src="/picture/item_4.jpg" alt="product">
+            <img src="picture/item_4.jpg" width="200" height="200" alt="product">
             <p class="product-title">Робот-пылесос Honor HOR-001 55041967</p>
             <p class="product-price">18 999 ₽</p>
             <button class="buy">Купить</button>
-            <button class="like"><img src="/picture/heart.png" width="15" alt=""></button>
+            <button class="like"><img src="picture/heart.png" width="15" height="15" alt=""></button>
           </div>
           <div class="product-item">
-            <img src="/picture/item_10.jpg" alt="product">
+            <img src="picture/item_5.jpg" width="200" height="200" alt="product">
             <p class="product-title">Кофемашина капсульного типа Dolce Gusto Krups KP270810</p>
             <p class="product-price">8 499 ₽</p>
             <div class="buttons">
               <button class="buy">Купить</button>
-              <button class="like"><img src="/picture/heart.png" width="15" alt=""></button>
+              <button class="like"><img src="picture/heart.png" width="15" height="15" alt=""></button>
             </div>
           </div>
         </div>
@@ -142,40 +114,40 @@
         <h3 class="new">Хиты продаж</h3>
         <div class="product">
           <div class="product-item">
-            <img src="/picture/item_6.jpg" alt="product">
+            <img src="picture/item_6.jpg" width="200" height="200" alt="product">
             <p class="product-title">Мультиварка Tefal MULTICOOK & BAKE RK908A32</p>
             <p class="product-price">29 999 ₽</p>
             <button class="buy">Купить</button>
-            <button class="like"><img src="/picture/heart.png" width="15" alt=""></button>
+            <button class="like"><img src="picture/heart.png" width="15" height="15" alt=""></button>
           </div>
           <div class="product-item">
-            <img src="/picture/item_7.jpg" alt="product">
+            <img src="picture/item_7.jpg" width="200" height="200" alt="product">
             <p class="product-title">Электрочайник Goodhelper KS-18B08</p>
             <p class="product-price">799 ₽</p>
             <button class="buy">Купить</button>
-            <button class="like"><img src="/picture/heart.png" width="15" alt=""></button>
+            <button class="like"><img src="picture/heart.png" width="15" height="15" alt=""></button>
           </div>
           <div class="product-item">
-            <img src="/picture/item_8.jpg" alt="product">
+            <img src="picture/item_8.jpg" width="200" height="200" alt="product">
             <p class="product-title">Смартфон HUAWEI nova 8i Interstellar Blue (NEN-LX1)</p>
             <p class="product-price">21 999 ₽</p>
             <button class="buy">Купить</button>
-            <button class="like"><img src="/picture/heart.png" width="15" alt=""></button>
+            <button class="like"><img src="picture/heart.png" width="15" height="15" alt=""></button>
           </div>
           <div class="product-item">
-            <img src="/picture/item_9.jpg" alt="product">
+            <img src="picture/item_9.jpg" width="200" height="200" alt="product">
             <p class="product-title">Стиральная машина узкая Haier HW60-BP12959A</p>
             <p class="product-price">38 999 ₽</p>
             <button class="buy">Купить</button>
-            <button class="like"><img src="/picture/heart.png" width="15" alt=""></button>
+            <button class="like"><img src="picture/heart.png" width="15" height="15" alt=""></button>
           </div>
           <div class="product-item">
-            <img src="/picture/item_10.jpg" alt="product">
+            <img src="picture/item_10.jpg" width="200" height="200" alt="product">
             <p class="product-title">Телевизор Haier 55 Smart TV MX</p>
             <p class="product-price">53 999 ₽</p>
             <div class="buttons">
               <button class="buy">Купить</button>
-              <button class="like"><img src="/picture/heart.png" width="15" alt=""></button>
+              <button class="like"><img src="picture/heart.png" width="15" height="15" alt=""></button>
             </div>
           </div>
         </div>
@@ -184,40 +156,40 @@
         <h3 class="new">Самые просматриваемые</h3>
         <div class="product">
           <div class="product-item">
-            <img src="/picture/item_11.jpg" alt="product">
+            <img src="picture/item_11.jpg" width="200" height="200" alt="product">
             <p class="product-title">Телевизор Samsung UE55AU7570U</p>
             <p class="product-price">76 999 ₽</p>
             <button class="buy">Купить</button>
-            <button class="like"><img src="/picture/heart.png" width="15" alt=""></button>
+            <button class="like"><img src="picture/heart.png" width="15" height="15" alt=""></button>
           </div>
           <div class="product-item">
-            <img src="/picture/item_12.jpg" alt="product">
+            <img src="picture/item_12.jpg" width="200" height="200" alt="product">
             <p class="product-title">Электрическая зубная щетка Braun ORAL-B Vitality D100.413.1 CrossAction 1+1</p>
             <p class="product-price">3 499 ₽</p>
             <button class="buy">Купить</button>
-            <button class="like"><img src="/picture/heart.png" width="15" alt=""></button>
+            <button class="like"><img src="picture/heart.png" width="15" height="15" alt=""></button>
           </div>
           <div class="product-item">
-            <img src="/picture/item_13.jpg" alt="product">
+            <img src="picture/item_13.jpg" width="200" height="200" alt="product">
             <p class="product-title">Холодильник Haier C2F637CWMV</p>
             <p class="product-price">72 999 ₽</p>
             <button class="buy">Купить</button>
-            <button class="like"><img src="/picture/heart.png" width="15" alt=""></button>
+            <button class="like"><img src="picture/heart.png" width="15" height="15" alt=""></button>
           </div>
           <div class="product-item">
-            <img src="/picture/item_14.jpg" alt="product">
+            <img src="picture/item_14.jpg" width="200" height="200" alt="product">
             <p class="product-title">Стиральная машина узкая LG F2T3HS6S</p>
             <p class="product-price">59 999 ₽</p>
             <button class="buy">Купить</button>
-            <button class="like"><img src="/picture/heart.png" width="15" alt=""></button>
+            <button class="like"><img src="picture/heart.png" width="15" height="15" alt=""></button>
           </div>
           <div class="product-item">
-            <img src="/picture/item_15.jpg" alt="product">
+            <img src="picture/item_15.jpg" width="200" height="200" alt="product">
             <p class="product-title">Встраиваемая индукционная панель Bosch Serie|4 PWP64RBB6E</p>
             <p class="product-price">46 999 ₽</p>
             <div class="buttons">
               <button class="buy">Купить</button>
-              <button class="like"><img src="/picture/heart.png" width="15" alt=""></button>
+              <button class="like"><img src="picture/heart.png" width="15" height="15" alt=""></button>
             </div>
           </div>
         </div>
@@ -265,6 +237,34 @@
         </ul>
       </div>
     </footer>
+
+    <div class="pop_up" id="pop_up_enter">
+      <div class="pop_up__container">
+        <div class="pop_up__body" id="pop_up_body">
+          <p class="pop_up_name">Вход</p>
+          <form action="">
+            <input type="text" placeholder="Логин">
+            <input type="text" placeholder="Пароль">
+            <button><a class="enter" href="index3.html">Войти</a></button>
+          </form>
+          <div class="pop_up__close" id="pop_up_close_enter">&#10006</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pop_up" id="pop_up_reg">
+      <div class="pop_up__container">
+        <div class="pop_up__body" id="pop_up_body">
+          <p class="pop_up_name">Регистрация</p>
+          <form action="">
+            <input type="text" placeholder="Логин">
+            <input type="text" placeholder="Пароль">
+            <button>Зарегистрироваться</button>
+          </form>
+          <div class="pop_up__close" id="pop_up_close_reg">&#10006</div>
+        </div>
+      </div>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
