@@ -55,11 +55,12 @@
     </header>
 
     <main class="main">
+
         <div class="cart">
             <ul class="cart-nav">
                 <a href="#" class="cart-nav__cart">
                     <li class="cart-nav__item">Корзина:
-                        <span class="cart-nav__cart-value">0</span>
+                        <span class="cart-nav__cart-value" id="count">0</span>
                     </li>
                 </a>
                 <a href="#" class="cart-nav__cart">
@@ -68,6 +69,12 @@
                     </li>
                 </a>
             </ul>
+
+            <div class="page" id="page-basket">
+              <div class="product basket" id="basket">
+              </div>
+            </div>
+
             <div class="cart-items">
                 <div class="cart-items__empty">
                     <div class="text">Ваша корзина пуста</div>
@@ -77,11 +84,12 @@
 
                   <div class="basket-total__left">
                     <div class="basket-total__value">
-                      <span class="js__items_count">0 товаров</span>
+                      <span>Количество товаров</span>
+                      <div class="js__items_count">0 товаров</div>
                     </div>
                     <div class="basket-total__value">
                       <span>Общая сумма</span>
-                      <span class="js__all_items_price">0 ₽</span>
+                      <div class="js__all_items_price">0 ₽</div>
                     </div>
                     <div class="basket-total__value">
                       <span>Скидка по промокоду</span>
@@ -180,7 +188,7 @@
         </div>
       </div>
 
-      <script src="script.js"></script>
+      <script src="script2.js" type="module"></script>
 
 </body>
 </html>

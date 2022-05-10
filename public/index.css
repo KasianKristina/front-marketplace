@@ -259,6 +259,7 @@ a.header__logo__name {
     border-radius: 20%;
     width: 30px;
     height: 30px;
+    transition: color 9999999s;
 }
 
 .like:hover {

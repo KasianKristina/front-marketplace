@@ -255,14 +255,13 @@ a.header__logo__name {
 /*------------ Кнопка "Понравилось" --------------- */
 
 .like {
-    background: #DC143C;
     border-radius: 20%;
     width: 30px;
     height: 30px;
 }
 
 .like:hover {
-    background:blue;
+    background:#DC143C;
 }
 
 /*----------------------- Footer ------------------------------ */
