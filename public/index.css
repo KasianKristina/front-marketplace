@@ -404,7 +404,7 @@ body {
     z-index: 2;
 }
 
-.pop_up.active {
+.active {
     display: block;
 }
 
