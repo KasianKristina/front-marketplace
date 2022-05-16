@@ -37,12 +37,12 @@ body {
     color:#00008B;
 }
 
-a.enter {
+.enter {
     text-decoration: none;
     color:#FFFFFF;
 }
 
-a.header__logo__name {
+.header__logo__name {
     text-decoration: none;
     color:#00008B;
 }
@@ -64,12 +64,9 @@ a.header__logo__name {
 
 /*------------ Навигация --------------- */
 
-.nav {
+.nav__link {
     font-size: 14px;
     text-transform: uppercase;
-}
-
-.nav__link {
     display: inline-block;
     vertical-align: top;
     margin: 0 3px;
@@ -216,7 +213,7 @@ a.header__logo__name {
 }
 
 .product-item {
-    max-width: 20%;
+    max-width: 18%;
     min-width: auto;
 }
 
@@ -230,7 +227,7 @@ a.header__logo__name {
 
 .product-title {
     font-weight: 550;
-    font-size: 22px;
+    font-size: 20px;
 }
 
 .product-price {
@@ -299,7 +296,7 @@ a.header__logo__name {
     margin-bottom: 20px;
 }
 
-a.footer-link{
+.footer-link{
     color: #FFFFFF;
     font-size: 12px;
     text-decoration: none;
@@ -319,7 +316,7 @@ a.footer-link{
     list-style-type: none;
 }
 
-a.cart-nav__cart {
+.cart-nav__cart {
     text-decoration: none;
     font-size: 20px;
 }
@@ -376,14 +373,14 @@ a.cart-nav__cart {
     list-style-type: none;
 }
 
-a.person-link, .out{
+.person-link, .out{
     color:#333;
     font-size: 28px;
     font-weight: 500;
     text-decoration: none;
 }
 
-li.line {
+.line {
     margin-bottom: 35px;
 }
 
@@ -429,13 +426,12 @@ li.line {
 
 .pop_up_name {
     font-size: 28px;
-    font-family: Montserrat;
     font-weight: 600;
     color:#00008B;
     margin-bottom: 40px;
 }
 
-.pop_up__body input {
+.pop_up__body__input {
     display: block;
     margin: 25px auto 0px auto;
     width: 330px;
@@ -449,11 +445,11 @@ li.line {
     color: #89909F;
 }
 
-.pop_up__body input:focus {
+.pop_up__body__input:focus {
     outline: none;
 }
 
-.pop_up__body button {
+.pop_up__body__enter {
     cursor: pointer;
     display: block;
     width: 330px;
@@ -468,6 +464,11 @@ li.line {
     background-color: #00008B;
 }
 
+.pop_up__body__enter__link {
+    text-decoration: none;
+    color:#FFFFFF;
+}
+
 .pop_up__close {
     position: absolute;
     top: 15px;
@@ -475,9 +476,3 @@ li.line {
     font-size: 21px;
     cursor: pointer;
 }
-
-
-
-
-
-
