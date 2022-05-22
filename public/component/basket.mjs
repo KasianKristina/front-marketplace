@@ -30,7 +30,7 @@ export async function btnBuy(e){
  * @param {number} id - id пользователя
  */
 export async function productBasket(id){
-    let url = 'https://cifra-store.herokuapp.com/customer/cart';
+    let url = 'http://89.108.81.17:8082/customer/cart';
     let response = await fetch(url, {
         method: 'POST',          
         body: JSON.stringify({'product_id': id, 'product_num':  1}), 
@@ -42,9 +42,6 @@ export async function productBasket(id){
     let result = await response.json();
 
     console.log(result);
-    // Update ломает главную страницу
-   //update();
-    
 }
 
 /**
@@ -52,7 +49,7 @@ export async function productBasket(id){
  * @param {number} id - id пользователя
  */
  export async function productDeleteBasket(id){
-    let url = 'https://cifra-store.herokuapp.com/customer/cart';
+    let url = 'http://89.108.81.17:8082/customer/cart';
 
     console.log({'product_id': id});
  
@@ -66,15 +63,16 @@ export async function productBasket(id){
     });
     let result = await response.json();
     console.log(result);
-    
-   //update();
+
+    //location.reload(); // перезагружаем страницу
+
 }
 
 
 /**
  * Обновление продуктов в корзине
  */
-export async function update() {
+export function update() {
 
     var element = document.getElementById("basket");
 
@@ -83,13 +81,12 @@ export async function update() {
         element.removeChild(element.firstChild);
         }
     }
-    getProductBasket('https://cifra-store.herokuapp.com/customer/cart?previous_id=0');
+    getProductBasket('http://89.108.81.17:8082/customer/cart?previous_id=0');
 }
 
 
 
 export async function getProductBasket(url){
-    console.log("hibhbnkjbhv gfcdfcf")
     let response = await fetch(url, {
         method: 'GET',           
         headers: {
@@ -98,28 +95,28 @@ export async function getProductBasket(url){
     });
     let result = await response.json();
 
-    console.log('количество продуктов', result.products.length);
+    
+    if (response.ok){
+        console.log('количество продуктов', result.products.length);
+            for (let i = 0; i < result.products.length; i++) {
+                add_product('basket',result.products[i].url.match(/item_[0-9]*.jpg/)[0],
+                            result.products[i].product_id,result.products[i].name,result.products[i].price,
+                            result.products[i].love,'Yes');
 
-    for (let i = 0; i < result.products.length; i++) {
-        add_product('basket',result.products[i].url.match(/item_[0-9]*.jpg/)[0],
-                    result.products[i].product_id,result.products[i].name,result.products[i].price,
-                    result.products[i].love,'Yes');
+                let el = document.getElementById(result.products[i].product_id);
+                el.innerText = "Удалить"; 
+                
+                plusFullPrice(result.products[i].price);
+            }
+    
 
-        let el = document.getElementById(result.products[i].product_id);
-        el.innerText = "Удалить"; 
+            console.log(result);
         
-        plusFullPrice(result.products[i].price);
+            if (result.previous_id != 0) {getProductBasket(`http://89.108.81.17:8082/customer/cart?previous_id=${result.previous_id}`);}
+            printFullPrice();
+            printQuantity();
     }
-
-    console.log(result);
-   
-    if (result.previous_id != 0) {getProductBasket(`https://cifra-store.herokuapp.com/customer/cart?previous_id=${result.previous_id}`);}
-    printFullPrice();
-    printQuantity();
 }
-
-
-
 
 
 const plusFullPrice = (currentPrice) => {

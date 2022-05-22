@@ -1,8 +1,10 @@
 import { getCookie} from "./cookie.mjs";
 
 
-
-export async function likeproduct(event){
+/**
+ * Нажатие на кнопку like
+ */
+ export async function likeproduct(event){
 
   event.preventDefault();
 
@@ -26,8 +28,11 @@ export async function likeproduct(event){
   }
 }
 
-export async function productLove(id){
-  let url = 'https://cifra-store.herokuapp.com/customer/favourite';
+/**
+ * Добавить продукт в корзину
+ */
+ export async function productLove(id){
+  let url = 'http://89.108.81.17:8082/customer/favourite';
   let response = await fetch(url, {
       method: 'POST',          
       body: JSON.stringify({'product_id': id}), 
@@ -44,13 +49,13 @@ export async function productLove(id){
     alert("Ошибка HTTP: " + response.status);
   } 
 
-  // products('New');
-  // products('hits');
-  // products('mostpr');
 }
 
-export async function deleteLove(id){
-  let url = 'https://cifra-store.herokuapp.com/customer/favourite';
+/**
+ * Удаление продукта из корзины
+ */
+ export async function deleteLove(id){
+  let url = 'http://89.108.81.17:8082/customer/favourite';
   let response = await fetch(url, {
       method: 'DELETE',          
       body: JSON.stringify({'product_id': id}), 
@@ -67,7 +72,4 @@ export async function deleteLove(id){
     alert("Ошибка HTTP: " + response.status);
   } 
 
-  // products('New');
-  // products('hits');
-  // products('mostpr');
 }

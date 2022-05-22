@@ -74,11 +74,6 @@
               <div class="product basket" id="basket">
               </div>
             </div>
-
-            <div class="cart-items">
-                <div class="cart-items__empty">
-                    <div class="text">Ваша корзина пуста</div>
-                </div>
                 
                 <div class="basket-total">
 
@@ -164,10 +159,10 @@
         <div class="pop_up__container">
           <div class="pop_up__body" id="pop_up_body">
             <p class="pop_up_name">Вход</p>
-            <form action="">
-              <input type="text" placeholder="Логин">
-              <input type="text" placeholder="Пароль">
-              <button><a class="enter" href="index3.html">Войти</a></button>
+            <form action="" id="form">
+              <input class="pop_up__body__input" type="text" placeholder="Логин" id="login">
+              <input class="pop_up__body__input" type="text" placeholder="Пароль" id="password">
+              <button class="pop_up__body__enter enter" data-action="enter-enter" id="b"><a class="pop_up__body__enter__link" href="index.html">Войти</a></button>
             </form>
             <div class="pop_up__close" id="pop_up_close_enter">&#10006</div>
           </div>
@@ -178,10 +173,10 @@
         <div class="pop_up__container">
           <div class="pop_up__body" id="pop_up_body">
             <p class="pop_up_name">Регистрация</p>
-            <form action="">
-              <input type="text" placeholder="Логин">
-              <input type="text" placeholder="Пароль">
-              <button>Зарегистрироваться</button>
+            <form action="" id="form2">
+              <input class="pop_up__body__input" type="text" placeholder="Логин" id="registration-login">
+              <input class="pop_up__body__input" type="text" placeholder="Пароль" id="registration-login">
+              <button class="pop_up__body__enter" data-action="registration-registration"><a class="pop_up__body__enter__link" href="index.html">Зарегистрироваться</a></button>
             </form>
             <div class="pop_up__close" id="pop_up_close_reg">&#10006</div>
           </div>

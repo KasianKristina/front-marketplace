@@ -1,6 +1,7 @@
-let price = 0;
 
-
+/**
+ * Формирование карточки с продуктом
+ */
 function generateCartProduct (img, id, title, price, buy, love) {
     console.log("work");
     let buy_btn = 'Купить';
@@ -8,7 +9,7 @@ function generateCartProduct (img, id, title, price, buy, love) {
 
     return  `
     <div class="product-item" id="product-${id}" data-id="${id}">
-        <img src="https://cifra-store.herokuapp.com/product/${id}/photo/${img}" width="200" height="200" alt="product">
+        <img src="http://89.108.81.17:8082/product/${id}/photo/${img}" width="200" height="200" alt="product">
         <p class="product-title-${id}">${title}</p>
         <p class="product-price-${id}" id="price-${id}">${normalPrice(price)} ₽</p>
         <div class="buttons">
@@ -20,7 +21,9 @@ function generateCartProduct (img, id, title, price, buy, love) {
     
 }
 
-
+/**
+ * Добавление нового продукта
+ */
 export function add_product(sel,img,id,name,price,love, buy){
     const classin =  document.querySelector(`.${sel}`);
     classin.insertAdjacentHTML('beforeend',generateCartProduct(img,id,name, price, buy, love))
@@ -29,12 +32,16 @@ export function add_product(sel,img,id,name,price,love, buy){
 }
 
 
-
+/**
+ * Корректировка внешнего вида цены
+ */
 export const normalPrice = (str) => {
     return (str + "").split("").reverse().join("").replace(/(\d{3})/g, "$1 ").split("").reverse().join("").replace(/^ /, "");
 }
 
-
+/**
+ * изменение цвета у кнопки like
+ */
 function color(id, love){
     let idLove = `${id}-like`
     var seltheme = document.getElementById(idLove);

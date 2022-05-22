@@ -20,7 +20,8 @@ window.addEventListener('click', function(event){
     }
     if (event.target.dataset.action === 'add-in-basket'){
         btnBuy(event);
-        update()       
+        update() 
+        location.reload(); 
     }
     
 });    
