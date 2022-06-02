@@ -5,105 +5,24 @@
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', Georgia, sans-serif;
     font-size: 15px;
     line-height: 1.6;
     color: #333;
 }
 
-/*----------------------- Форма регистрации и входа ------------------------------ */
-
-.pop_up {
-    display: none;
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    left: 0;
-    top: 0;
-    background-color: rgba(0, 0, 0, .8);
-    z-index: 2;
-}
-
-.pop_up.active {
-    display: block;
-}
-
-.pop_up__container {
-    display: flex;
-    width: 100%;
-    height: 100%;
-}
-
-.pop_up__body {
-    margin: auto;
-    width: 500px;
-    background-color: #FFFFFF;
-    border-radius: 10px;
-    text-align: center;
-    padding: 100px 15px 110px 15px;
-    position: relative;
-}
-
-.pop_up__body p {
-    font-size: 28px;
-    font-family: Montserrat;
-    font-weight: 600;
-    color:#00008B;
-    margin-bottom: 40px;
-}
-
-.pop_up__body input {
-    display: block;
-    margin: 25px auto 0px auto;
-    width: 330px;
-    padding: 17px 20px;
-    background-color: #e5e5e5;
-    border-radius: 10px;
-    border: none;
-    font-family: Montserrat;
-    font-weight: 500;
-    font-size: 18px;
-    color: #89909F;
-}
-
-.pop_up__body input:focus {
-    outline: none;
-}
-
-.pop_up__body button {
-    cursor: pointer;
-    display: block;
-    width: 330px;
-    margin: 60px auto 0px auto;
-    padding: 20px 0px;
-    font-family: Montserrat;
-    font-weight: 500;
-    font-size: 16px;
-    border: none;
-    color:#FFFFFF;
-    border-radius: 10px;
-    background-color: #00008B;
-}
-
-.pop_up__close {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    font-size: 21px;
-    cursor: pointer;
-}
-
 /*----------------------- Шапка ------------------------------ */
 
 .header {
-    position: absolute;
     top: 0;
     left: 0;
     right: 0;
     width: 100%;
     max-width: 1200px;
+    min-width: 900;
     margin: 0 auto;
-    padding-top: 30px;
+    padding-top: 40px;
+    margin-bottom: 25px;
 }
 
 .header__inner {
@@ -118,12 +37,12 @@ body {
     color:#00008B;
 }
 
-a.enter {
+.enter {
     text-decoration: none;
     color:#FFFFFF;
 }
 
-a.header__logo__name {
+.header__logo__name {
     text-decoration: none;
     color:#00008B;
 }
@@ -140,17 +59,14 @@ a.header__logo__name {
     background-color: #00008B;
     display: flex;
     align-items:center;
-    font-family: Montserrat;
+    font-family: Montserrat, Georgia;
 }
 
 /*------------ Навигация --------------- */
 
-.nav {
+.nav__link {
     font-size: 14px;
     text-transform: uppercase;
-}
-
-.nav__link {
     display: inline-block;
     vertical-align: top;
     margin: 0 3px;
@@ -199,7 +115,7 @@ a.header__logo__name {
     font-weight: 500;
     border: 2px solid #00008B;
     border-radius: 10px;
-    font-family: Montserrat;
+    font-family: Montserrat, Georgia;
 }
 
 .header__search::placeholder {
@@ -218,7 +134,7 @@ a.header__logo__name {
     background-color: #00008B;
     display: flex;
     align-items: center;
-    font-family: Montserrat;
+    font-family: Montserrat, Georgia;
 }
 
 /*----------------------- Main ------------------------------ */
@@ -226,13 +142,14 @@ a.header__logo__name {
 .main {
     width: 1100px;
     position: relative;
-    top: 100px;
+    top: 10px;
     left: 0;
     right: 0;
     width: 100%;
     max-width: 1200px;
+    min-width: 900;
     margin: 0 auto;
-    padding-top: 30px;
+    padding-top: 10px;
 }
 
 .content {
@@ -242,7 +159,7 @@ a.header__logo__name {
 
 .sale {
     margin-left: 0;
-    margin-top: 65px;
+    margin-top: 40px;
 }
 
 .sale-discription {
@@ -295,15 +212,22 @@ a.header__logo__name {
     margin-top: 10px;
 }
 
+.product-item {
+    max-width: 18%;
+    min-width: auto;
+}
+
 .product {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     text-align: center;
     align-items: flex-end;
 }
 
 .product-title {
-    font-weight: 600;
+    font-weight: 550;
+    font-size: 20px;
 }
 
 .product-price {
@@ -322,7 +246,7 @@ a.header__logo__name {
     padding: 5px 17px;
     text-decoration: none;
     margin-top: 20px;
-    font-family: Montserrat;
+    font-family: Montserrat, Georgia;
 }
 
 /*------------ Кнопка "Понравилось" --------------- */
@@ -372,7 +296,7 @@ a.header__logo__name {
     margin-bottom: 20px;
 }
 
-a.footer-link{
+.footer-link{
     color: #FFFFFF;
     font-size: 12px;
     text-decoration: none;
@@ -392,7 +316,7 @@ a.footer-link{
     list-style-type: none;
 }
 
-a.cart-nav__cart {
+.cart-nav__cart {
     text-decoration: none;
     font-size: 20px;
 }
@@ -431,7 +355,7 @@ a.cart-nav__cart {
     border-radius: 10px;
     color:aliceblue;
     background-color: #DC143C;
-    font-family: Montserrat;
+    font-family: Montserrat, Georgia;
 }
 
 /*----------------------- Main "Личный кабинет" ------------------------------ */
@@ -449,14 +373,14 @@ a.cart-nav__cart {
     list-style-type: none;
 }
 
-a.person-link, .out{
+.person-link, .out{
     color:#333;
     font-size: 28px;
     font-weight: 500;
     text-decoration: none;
 }
 
-li.line {
+.line {
     margin-bottom: 35px;
 }
 
@@ -466,3 +390,95 @@ li.line {
     margin-left: 30px;
     margin-right: 30px;
 }
+
+/*----------------------- Форма регистрации и входа ------------------------------ */
+
+.pop_up {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, .8);
+    z-index: 2;
+}
+
+.active {
+    display: block;
+}
+
+.pop_up__container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.pop_up__body {
+    margin: auto;
+    width: 500px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    text-align: center;
+    padding: 100px 15px 110px 15px;
+    position: relative;
+}
+
+.pop_up_name {
+    font-size: 28px;
+    font-weight: 600;
+    color:#00008B;
+    margin-bottom: 40px;
+}
+
+.pop_up__body__input {
+    display: block;
+    margin: 25px auto 0px auto;
+    width: 330px;
+    padding: 17px 20px;
+    background-color: #e5e5e5;
+    border-radius: 10px;
+    border: none;
+    font-family: Montserrat, Georgia;
+    font-weight: 500;
+    font-size: 18px;
+    color: #89909F;
+}
+
+.pop_up__body__input:focus {
+    outline: none;
+}
+
+.pop_up__body__enter {
+    cursor: pointer;
+    display: block;
+    width: 330px;
+    margin: 60px auto 0px auto;
+    padding: 20px 0px;
+    font-family: Montserrat, Georgia;
+    font-weight: 500;
+    font-size: 16px;
+    border: none;
+    color:#FFFFFF;
+    border-radius: 10px;
+    background-color: #00008B;
+}
+
+.pop_up__body__enter__link {
+    text-decoration: none;
+    color:#FFFFFF;
+}
+
+.pop_up__close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 21px;
+    cursor: pointer;
+}
+
+
+
+
+
+

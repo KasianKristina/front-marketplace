@@ -2,7 +2,6 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta
@@ -18,10 +17,12 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+    <title>MarketPlace</title>
+    <link rel="stylesheet" href="index.css">
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kaushan+Script|Montserrat:400,700&amp;subset=cyrillic-ext" rel="stylesheet">
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--
       This HTML file is a template.
@@ -33,5 +34,128 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+
+    <header class="header">
+        <div class="header__inner">
+          <div class="header__logo"><a class="header__logo__name" href="index.html">MarketPlace</a></div>
+          <button type="text" class="header__catalog">Каталог<img src="picture/menu.svg" width="17" height="17" alt=""></button>
+          <form class="search">
+            <input type="search" class="header__search" placeholder="Искать на MarketPlace"/>
+            <button type="submit" class="button">Поиск<img src="picture/search.svg" width="17" height="17" alt=""></button>
+          </form>
+
+          <nav class="nav">
+            <a class="nav__link" href="#" id="open_pop_up_enter">Войти</a>
+            <a class="nav__link" href="#" id="open_pop_up_reg">Регистрация</a>
+            <a class="nav__link" href="index3.html">Избранное</a>
+            <a class="nav__link" href="index2.html">Корзина</a>
+          </nav>
+        </div>
+    </header>
+
+    <main class="main">
+      <div class="content">
+        <div class="sale">
+          <p class="sale-discription">Весенняя распродажа</p>
+          <h1 class="sale-title">Скидки до 70%</h1>
+          <a class="btn" href="#">Смотреть товары</a>
+        </div>
+        <div class="box">
+          <img class="main-image" src="picture/main2_item.jpg" width="700" height="320" alt="main">
+        </div>
+      </div>
+      <div class="delivery">
+        <h2 class="notice-title"><span>Бесплатная доставка</span> от 2000 рублей</h2>
+        <p class="notice-description">Сделайте заказ и получите подарок</p>
+      </div>
+      <div class="page">
+        <h3 class="new">Новинки</h3>
+        <div class="product New">
+        </div>
+      </div>
+      <div class="page">
+        <h3 class="new">Хиты продаж</h3>
+        <div class="product hits">
+
+        </div>
+      </div>
+      <div class="page">
+        <h3 class="new">Самые просматриваемые</h3>
+        <div class="product mostpr">
+        </div>
+      </div>
+     
+    </main>
+
+    <footer class="footer">
+      <div class="footer-logo">MarketPlace</div>
+      <div class="footer-nav">
+        <ul class="footer-list">
+          <li class="footer-list-title">Покупателям</li>
+          <li><a class="footer-link" href="#">Каталог</a></li>
+          <li><a class="footer-link" href="#">Частые вопросы</a></li>
+          <li><a class="footer-link" href="#">Акции и скидки</a></li>
+          <li><a class="footer-link" href="#">Доставка</a></li>
+          <li><a class="footer-link" href="#">Обмен и возврат</a></li>
+          <li><a class="footer-link" href="#">Ремонт и страховка</a></li>
+          <li><a class="footer-link" href="#">Кредит и рассрочка</a></li>
+        </ul>
+
+        <ul class="footer-list">
+          <li class="footer-list-title">Бизнесу</li>
+          <li><a class="footer-link" href="#">Техника для вашей компании</a></li>
+          <li><a class="footer-link" href="#">Тендеры</a></li>
+          <li><a class="footer-link" href="#">Поставщикам</a></li>
+        </ul>
+
+        <ul class="footer-list">
+          <li class="footer-list-title">О компании</li>
+          <li><a class="footer-link" href="#">Про MarketPlace</a></li>
+          <li><a class="footer-link" href="#">Вакансии</a></li>
+          <li><a class="footer-link" href="#">Вакансии маркетинга</a></li>
+          <li><a class="footer-link" href="#">Отзывы о нас</a></li>
+          <li><a class="footer-link" href="#">Благотворительный фонд</a></li>
+          <li><a class="footer-link" href="#">Экологические инициативы</a></li>
+          <li><a class="footer-link" href="#">Политика компании</a></li>
+        </ul>
+
+        <ul class="footer-list">
+          <li class="footer-list-title">Обратная связь</li>
+          <li><a class="footer-link" href="#">Контакты</a></li>
+          <li><a class="footer-link" href="#">Оставить отзыв о товаре или услуге</a></li>
+          <li><a class="footer-link" href="#">Канал viber</a></li>
+          <li><a class="footer-link" href="#">Telegram</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <div class="pop_up" id="pop_up_enter">
+      <div class="pop_up__container">
+        <div class="pop_up__body" id="pop_up_body">
+          <p class="pop_up_name">Вход</p>
+          <form action="" id="form">
+            <input class="pop_up__body__input" type="text" placeholder="Логин" id="login">
+            <input class="pop_up__body__input" type="text" placeholder="Пароль" id="password">
+            <button id="enter_btn" class="pop_up__body__enter enter" data-action="enter-enter" id="b"><a class="pop_up__body__enter__link" data-action="enter-enter">Войти</a></button>
+          </form>
+          <div class="pop_up__close" id="pop_up_close_enter">&#10006</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pop_up" id="pop_up_reg">
+      <div class="pop_up__container">
+        <div class="pop_up__body" id="pop_up_body">
+          <p class="pop_up_name">Регистрация</p>
+          <form action="" id="form2">
+            <input class="pop_up__body__input" type="text" placeholder="Логин" id="registration-login">
+            <input class="pop_up__body__input" type="text" placeholder="Пароль" id="registration-password">
+            <button id="regist_btn" class="pop_up__body__enter" data-action="registration-registration"><a class="pop_up__body__enter__link" data-action="registration-registration"> </a>Зарегистрироваться</a></button>
+          </form>
+          <div class="pop_up__close" id="pop_up_close_reg">&#10006</div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="main.js"></script>
   </body>
 </html>
