@@ -1,5 +1,6 @@
 import { getCookie} from "./cookie.mjs";
-
+import {color} from "./cart.mjs"
+let url = 'http://89.108.81.17:8082/customer/favourite';
 
 /**
  * Нажатие на кнопку like
@@ -9,21 +10,16 @@ import { getCookie} from "./cookie.mjs";
   event.preventDefault();
 
   let id = event.target.getAttribute('id');
-  let value = event.target.getAttribute('value');
+  const button = document.getElementById(id);
 
-  console.log(id);
   const idLove = id.substr(0, id.match(/-like/).index)
-  var seltheme = document.getElementById(id);
-  console.log(value);
 
-  if (seltheme.style.backgroundColor === "rgb(255, 255, 255)") {
-    value = 'Yes';
-    seltheme.style.backgroundColor = '#DC143C'
+  if (button.value === 'No') {
+    button.value = 'Yes';
     productLove(idLove);
   }
   else  {
-    value = 'No';
-    seltheme.style.backgroundColor = '#ffffff';
+    button.value = 'No';
     deleteLove(idLove);
   }
 }
@@ -32,7 +28,7 @@ import { getCookie} from "./cookie.mjs";
  * Добавить продукт в корзину
  */
  export async function productLove(id){
-  let url = 'http://89.108.81.17:8082/customer/favourite';
+  color(id, 'Yes');
   let response = await fetch(url, {
       method: 'POST',          
       body: JSON.stringify({'product_id': id}), 
@@ -41,10 +37,6 @@ import { getCookie} from "./cookie.mjs";
           'Authorization': 'Bearer ' + getCookie('token')
       }
   });
-  let result = await response.json();
-
-  console.log(result);  
-
   if (!response.ok){
     alert("Ошибка HTTP: " + response.status);
   } 
@@ -55,7 +47,7 @@ import { getCookie} from "./cookie.mjs";
  * Удаление продукта из корзины
  */
  export async function deleteLove(id){
-  let url = 'http://89.108.81.17:8082/customer/favourite';
+  color(id, 'No');
   let response = await fetch(url, {
       method: 'DELETE',          
       body: JSON.stringify({'product_id': id}), 
@@ -64,10 +56,6 @@ import { getCookie} from "./cookie.mjs";
           'Authorization': 'Bearer ' + getCookie('token')
       }
   });
-  let result = await response.json();
-
-  console.log(result);  
-
   if (!response.ok){
     alert("Ошибка HTTP: " + response.status);
   } 

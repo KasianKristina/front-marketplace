@@ -7,14 +7,14 @@ import { getCookie, setCookie} from "./cookie.mjs";
 
 export async function products (tags) {
     let url = `http://89.108.81.17:8082/search/tag?tags=${tags}&previous_id=0`;
-    console.log(url)
+   
     let response = await fetch(url, {
         headers: {
           'Authorization': 'Bearer ' + getCookie('token')
         }
         });
     let result = await response.json(); 
-    console.log(result);
+  
     
     if (response.ok){
     for (let i = 0; i < result.products.length; i++) {
@@ -42,7 +42,6 @@ export async function products (tags) {
      let login = document.getElementById('login').value;
      let password1 = document.getElementById('password').value;
      let formData = new FormData();
-     console.log(login)
  
      formData.append('username', login);
      formData.append('password', password1);
@@ -72,13 +71,6 @@ export async function products (tags) {
      setCookie('token',result.access_token, {'max-age': 1800 })
      setCookie('name',login,1800)
      location.reload();
-     
-     // 
-    // var element = document.getElementById("basket");
-   //  while (element.firstChild) {
-    // element.removeChild(element.firstChild);
-    // }
- 
  };
  
  
@@ -96,7 +88,7 @@ export async function RegistrationForm(e)
     if (isValid(password1)) {
 
         let formData = new FormData();
-        console.log(login)
+        
 
         formData.append('username', login);
         formData.append('password', password1);
@@ -122,7 +114,6 @@ export async function RegistrationForm(e)
                     popUp2.classList.remove('active');
                     setCookie('token',result.access_token, {'max-age': 1800 })
                     setCookie('name',login,1800)
-                    console.log(result);
                     location.reload();
                 }
     }
@@ -138,20 +129,6 @@ function isValid(value) {
         return true;
     }
     else return false;
-}
-
-
-function login_in_cabinet(login){
-    console.log(login);
-    console.log('tyfuvbuihiguvjh');
-    const classin =  document.querySelector(".line");
-    classin.insertAdjacentHTML('beforeend',generateLogin(login))
-}
-
-function generateLogin(login) {
-    return `
-    <span id="my-login">${login}</span>
-    `;
 }
 
 
